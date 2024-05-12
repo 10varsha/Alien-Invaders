@@ -24,6 +24,10 @@ const alienInvaders = [
     30,31,32,33,34,35,36,37,38,39
 ]
 
+const endLine = [
+    195,196,197,198,199,200,201,202,203,204,205
+]
+
 function draw() {
     for (let i = 0; i < alienInvaders.length ; i++) {
         squares[alienInvaders[i]].classList.add('invader')
@@ -86,6 +90,12 @@ function moveInvaders() {
     if(squares[currentShooterIndex].classList.contains('invader')) {
         resultDisplay.innerHTML = "GAME OVER";
         clearInterval(invadersId)
+    }
+    for(let i =0 ; i < endLine.length ; i++){
+        if(squares[endLine[i]].classList.contains('invader')) {
+            resultDisplay.innerHTML = "GAME OVER";
+            clearInterval(invadersId)
+        }
     }
 
     if(aliensRemoved.length === alienInvaders.length) {
