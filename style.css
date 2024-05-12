@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Jaro:opsz@6..72&display=swap');
+
+body{
+    width: 99vw;
+    height: 94.85vh;
+    background-image: linear-gradient(to bottom, #050314, #0c0823, #0c0d33, #0b1043, #0b1153, #0b1153, #0a1152, #0a1152, #0a1042, #0c0c32, #0b0722, #030113);
+}
+
+#title{
+    font-family: "Jaro", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+    font-size: 3em;
+    color: #ffffff;
+}
+
+.container{
+    display: flex;
+    /* flex-direction: row; */
+    align-items: center;
+    justify-content: center;
+    width: 700px;
+}
+
+.results{
+    height: 500px;
+    width: 260px;
+    margin: 50px;
+    padding: 20px;
+    color: #ffffff;
+    float: left;
+    text-align: center;
+    font-family: "Jaro", sans-serif;
+}
+
+.grid{
+    width: 600px;
+    height: 600px;
+    border: solid 1px rgb(185, 185, 185);
+    /* background-color: rgba(255, 255, 255, 0.2); */
+    background-repeat: no-repeat;
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid div{
+    width: 40px;
+    height: 40px;
+}
+
+.invader{
+    background-color: rgb(213, 25, 213);
+    border-radius: 20px;
+}
+
+.shooter{
+    background-image: url(rocket.png);
+}
+
+.laser{
+    background-color: greenyellow;
+}
+
+.boom{
+    background-color: red;
+}
