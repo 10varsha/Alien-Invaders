@@ -12,8 +12,9 @@ body{
     font-weight: 400;
     font-style: normal;
     text-align: center;
-    font-size: 3em;
+    font-size: 4em;
     color: #ffffff;
+    margin: 40px;
 }
 
 .container{
@@ -21,7 +22,7 @@ body{
     /* flex-direction: row; */
     align-items: center;
     justify-content: center;
-    width: 700px;
+    width: 650px;
 }
 
 .results{
@@ -31,6 +32,7 @@ body{
     padding: 20px;
     color: rgb(255, 212, 55);
     float: left;
+    font-size: 3rem;
     text-align: center;
     font-family: "Jaro", sans-serif;
 }

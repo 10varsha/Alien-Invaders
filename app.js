@@ -61,9 +61,17 @@ function moveShooter(e) {
 document.addEventListener('keydown', moveShooter)
 
 function moveInvaders() {
-    const leftEdge = alienInvaders[0] % width === 0;
-    let rightEdge = alienInvaders[alienInvaders.length -1] % width === width - 1;
+    console.log(alienInvaders)
+    let leftEdge = false;
+    let rightEdge = false;
     remove();
+
+    for( let i of alienInvaders){
+        if(i % width === width - 1)
+            rightEdge = true;  
+        if(i % width === 0)
+            leftEdge = true;
+    }
 
     if (rightEdge && isGoingRight ) {
         for(let i = 0 ; i< alienInvaders.length ; i++) {
@@ -105,7 +113,7 @@ function moveInvaders() {
     rightEdge = alienInvaders[alienInvaders.length - 1] % width === width - 1; // Recalculate rightEdge here
 }
 
-invadersId = setInterval(moveInvaders, 600)
+invadersId = setInterval(moveInvaders, 200)
 
 function shoot(e) {
     let laserId;
